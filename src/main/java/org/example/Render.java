@@ -5,7 +5,6 @@ public class Render {
     private final int width;
 
     Data data;
-    String [][] gameField;
 
     private void clearScreen() {
         System.out.print("\033[H\033[J");
@@ -15,9 +14,7 @@ public class Render {
         clearScreen();
         for(int i = 0; i < height; i++) {
             for(int j = 0; j < width; j++) {
-                if(i == 0 || i == height - 1) System.out.print(data.getSymbol(1));
-                else if(j == 0 || j == width - 1) System.out.print(data.getSymbol(2));
-                else System.out.print(data.getSymbol(0));
+                System.out.print(data.getFieldPole(i, j));
             }
             System.out.println();
         }
@@ -33,6 +30,5 @@ public class Render {
         this.data = data;
         this.height = data.getHeight();
         this.width = data.getWidth();
-        this.gameField = data.getField();
     }
 }

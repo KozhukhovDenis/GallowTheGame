@@ -13,7 +13,7 @@ public class Main {
             int select = input.nextInt();
             if(select == 1) {
                 Game game = new Game(render, data);
-                game.startGame();
+                game.playGame();
             }
             else if(select == 2) data.setIsEndGame(true);
             //else continue;

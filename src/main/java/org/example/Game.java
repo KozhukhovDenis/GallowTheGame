@@ -4,7 +4,7 @@ public class Game {
     Render render;
     Data data;
 
-    public void startGame() {
+    public void playGame() {
         boolean isGame = true;
         while(isGame) {
             render.drawField();
