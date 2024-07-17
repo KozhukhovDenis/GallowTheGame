@@ -18,6 +18,7 @@ public class Render {
             }
             System.out.println();
         }
+        System.out.print("Введите букву и нажмите Enter: ");
     }
 
     public void drawMenu() {
