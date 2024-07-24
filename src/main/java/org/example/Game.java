@@ -38,7 +38,10 @@ public class Game {
             if(isFind) {
                 data.setSecret(secret);
                 countPos++;
-            } else countNeg++;
+            } else {
+                countNeg++;
+                data.setCorpse(countNeg);
+            }
         }
     }
 

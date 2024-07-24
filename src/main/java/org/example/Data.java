@@ -37,9 +37,6 @@ public class Data {
     public boolean getIsEndGame() {
         return isEndGame;
     }
-    public String getSymbol(int n) {
-        return symbols[n];
-    }
     public int getHeight() {
         return height;
     }
@@ -49,10 +46,7 @@ public class Data {
     public String getFieldPole(int i, int j) {
         return field[i][j];
     }
-    public void setField(String[][] field) {
-        this.field = field;
-    }
-    public String getWord() {
+     public String getWord() {
         return word;
     }
     public void setSecret(String[] secret) {
@@ -68,6 +62,30 @@ public class Data {
     }
     public void newWord() {
         word = Constants.WORDS[(int) (Math.random() * Constants.WORDS.length)];
+    }
+    public void setCorpse(int num) {
+        switch (num) {
+            case 1:
+                field[4][15] = symbols[5];
+                break;
+            case 2:
+                field[5][15] = symbols[3];
+                break;
+            case 3:
+                field[5][14] = symbols[2];
+                break;
+            case 4:
+                field[5][16] = symbols[4];
+                break;
+            case 5:
+                field[6][14] =symbols[2];
+                break;
+            case 6:
+                field[6][16] = symbols[4];
+                break;
+            default:
+                break;
+        }
     }
     Data() {
         this.height = Constants.HEIGHT;
